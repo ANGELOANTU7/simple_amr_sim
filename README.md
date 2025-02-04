@@ -151,6 +151,4 @@ These mappings are established through the `gz_ros2_bridge` node which facilitat
 | :----------------------------------: | :------------------------------------: |
 |          _Gazebo Ign_                |                _Rviz_	                | 
 
-## References
-- [GitHub: blackcoffeerobotics/bcr_bot](https://github.com/blackcoffeerobotics/bcr_bot/tree/ros2)
-- [Medium: How to Subscribe to Ignition Gazebo Topics using ROS2](https://medium.com/@geetkal67/how-to-subscribe-to-ignition-gazebo-topics-using-ros2-8bcff7a0242e)
+
