@@ -108,15 +108,11 @@
 
     <!-- ................................ WHEELS ..................................... -->
     
-    <xacro:trolley_wheel cardinality="front" dexterity="left" origin_x="${chassis_length/2}" origin_y="${trolley_track_width/2}" origin_z="-${trolley_wheel_radius+chassis_height/2}"/>
-    <xacro:trolley_wheel cardinality="front" dexterity="right" origin_x="${chassis_length/2}" origin_y="-${trolley_track_width/2}" origin_z="-${trolley_wheel_radius+chassis_height/2}"/>
+  
 
-    <xacro:trolley_wheel cardinality="back" dexterity="left" origin_x="-${chassis_length/2}" origin_y="${trolley_track_width/2}" origin_z="-${trolley_wheel_radius+chassis_height/2}"/>
-    <xacro:trolley_wheel cardinality="back" dexterity="right" origin_x="-${chassis_length/2}" origin_y="-${trolley_track_width/2}" origin_z="-${trolley_wheel_radius+chassis_height/2}"/>
-
-    <xacro:traction_wheel_1 cardinality="middle" dexterity="left" origin_x="0" origin_y="${traction_track_width_1/2}" origin_z="-${chassis_height/2+2*trolley_wheel_radius+eps-traction_wheel_radius_1}"/>
+    <xacro:traction_wheel_1 cardinality="middle" dexterity="left" origin_x="${chassis_width/2}" origin_y="${traction_track_width_1/2}" origin_z="-${chassis_height/2+2*trolley_wheel_radius+eps-traction_wheel_radius_1}"/>
     
-    <xacro:traction_wheel_2 cardinality="middle" dexterity="right" origin_x="0" origin_y="-${traction_track_width_2/2}" origin_z="-${chassis_height/2+2*trolley_wheel_radius+eps-traction_wheel_radius_2}"/>
+    <xacro:traction_wheel_2 cardinality="middle" dexterity="right" origin_x="${chassis_width/2}" origin_y="-${traction_track_width_2/2}" origin_z="-${chassis_height/2+2*trolley_wheel_radius+eps-traction_wheel_radius_2}"/>
     
     <!-- ............................. CAMERA ........................................ -->
 

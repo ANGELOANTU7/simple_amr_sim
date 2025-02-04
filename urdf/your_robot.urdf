@@ -61,7 +61,7 @@
       <geometry>
         <box size="0.9 0.64 0.19"/>
       </geometry>
-      <material name="red"/>
+      <material name="orange"/>
     </visual>
     <inertial>
       <mass value="70"/>
@@ -75,122 +75,6 @@
   </joint>
   <!-- ................................ WHEELS ..................................... -->
   <link name="front_left_wheel">
-    <collision>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </visual>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.1"/>
-      <inertia ixx="0.00014399999999999998" ixy="0" ixz="0" iyy="0.00014399999999999998" iyz="0" izz="0.00014399999999999998"/>
-    </inertial>
-    <mu>0.0</mu>
-  </link>
-  <joint name="front_left_wheel_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="front_left_wheel"/>
-    <origin rpy="0 0 0" xyz="0.45 0.27 -0.155"/>
-    <axis rpy="0 0 0" xyz="0 1 0"/>
-  </joint>
-  <gazebo reference="front_left_wheel">
-    <material>Gazebo/Black</material>
-  </gazebo>
-  <link name="front_right_wheel">
-    <collision>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </visual>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.1"/>
-      <inertia ixx="0.00014399999999999998" ixy="0" ixz="0" iyy="0.00014399999999999998" iyz="0" izz="0.00014399999999999998"/>
-    </inertial>
-    <mu>0.0</mu>
-  </link>
-  <joint name="front_right_wheel_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="front_right_wheel"/>
-    <origin rpy="0 0 0" xyz="0.45 -0.27 -0.155"/>
-    <axis rpy="0 0 0" xyz="0 1 0"/>
-  </joint>
-  <gazebo reference="front_right_wheel">
-    <material>Gazebo/Black</material>
-  </gazebo>
-  <link name="back_left_wheel">
-    <collision>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </visual>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.1"/>
-      <inertia ixx="0.00014399999999999998" ixy="0" ixz="0" iyy="0.00014399999999999998" iyz="0" izz="0.00014399999999999998"/>
-    </inertial>
-    <mu>0.0</mu>
-  </link>
-  <joint name="back_left_wheel_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="back_left_wheel"/>
-    <origin rpy="0 0 0" xyz="-0.45 0.27 -0.155"/>
-    <axis rpy="0 0 0" xyz="0 1 0"/>
-  </joint>
-  <gazebo reference="back_left_wheel">
-    <material>Gazebo/Black</material>
-  </gazebo>
-  <link name="back_right_wheel">
-    <collision>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0"/>
-      <geometry>
-        <sphere radius="0.06"/>
-      </geometry>
-    </visual>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.1"/>
-      <inertia ixx="0.00014399999999999998" ixy="0" ixz="0" iyy="0.00014399999999999998" iyz="0" izz="0.00014399999999999998"/>
-    </inertial>
-    <mu>0.0</mu>
-  </link>
-  <joint name="back_right_wheel_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="back_right_wheel"/>
-    <origin rpy="0 0 0" xyz="-0.45 -0.27 -0.155"/>
-    <axis rpy="0 0 0" xyz="0 1 0"/>
-  </joint>
-  <gazebo reference="back_right_wheel">
-    <material>Gazebo/Black</material>
-  </gazebo>
-  <link name="middle_left_wheel">
     <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
@@ -211,20 +95,20 @@
     </inertial>
     <mu>5.0</mu>
   </link>
-  <joint name="middle_left_wheel_joint" type="continuous">
+  <joint name="front_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="middle_left_wheel"/>
-    <origin rpy="0 0 0" xyz="0 0.375 -0.107"/>
+    <child link="front_left_wheel"/>
+    <origin rpy="0 0 0" xyz="0.32 0.375 -0.107"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
-  <gazebo reference="middle_left_wheel">
+  <gazebo reference="front_left_wheel">
     <material>Gazebo/Black</material>
     <mu1>0.9</mu1>
     <!-- Static friction coefficient -->
     <mu2>0.8</mu2>
     <!-- Dynamic friction coefficient -->
   </gazebo>
-  <link name="middle_right_wheel">
+  <link name="front_right_wheel">
     <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
@@ -245,13 +129,13 @@
     </inertial>
     <mu>5.0</mu>
   </link>
-  <joint name="middle_right_wheel_joint" type="continuous">
+  <joint name="front_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="middle_right_wheel"/>
-    <origin rpy="0 0 0" xyz="0 -0.35 -0.11699999999999999"/>
+    <child link="front_right_wheel"/>
+    <origin rpy="0 0 0" xyz="0.32 -0.35 -0.11699999999999999"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
-  <gazebo reference="middle_right_wheel">
+  <gazebo reference="front_right_wheel">
     <material>Gazebo/Black</material>
     <mu1>0.5</mu1>
     <!-- Static friction coefficient -->

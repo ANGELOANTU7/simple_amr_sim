@@ -19,26 +19,7 @@
 
     <xacro:macro name="trolley_wheel" params="cardinality dexterity origin_x origin_y origin_z">
         <link name="${cardinality}_${dexterity}_wheel">
-            <collision>
-                <origin xyz="0 0 0" rpy="0 ${pi/2} ${pi/2}" />
-                <geometry>
-                    <sphere radius="${trolley_wheel_radius}"/>
-                </geometry>
-            </collision>
-            
-            <visual>
-                <origin xyz="0 0 0" rpy="0 ${pi/2} ${pi/2}" />
-                <geometry>
-                    <sphere radius="${trolley_wheel_radius}"/>
-                </geometry>
-                
-            </visual>
-
-            <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0" />
-                <mass value="${trolley_wheel_mass}"/>
-                <xacro:sphere_inertia m="${trolley_wheel_mass}" r="${trolley_wheel_radius}"/>
-            </inertial>
+          
 
             <mu>0.0</mu>
         </link>
